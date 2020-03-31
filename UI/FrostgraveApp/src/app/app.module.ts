@@ -9,6 +9,14 @@ import { environment } from '../environments/environment';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+
 import { NewWarbandViewComponent } from './new-warband-view/new-warband-view.component';
 import { HomeComponent } from './home/home.component'
 
@@ -24,7 +32,14 @@ import { HomeComponent } from './home/home.component'
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
