@@ -1,7 +1,4 @@
-package com.westley.frostgraveapp.models;
-
-import org.springframework.stereotype.Indexed;
-
+package com.westley.frostgraveapp.Frostgrave.App.models;
 
 public class School {
 

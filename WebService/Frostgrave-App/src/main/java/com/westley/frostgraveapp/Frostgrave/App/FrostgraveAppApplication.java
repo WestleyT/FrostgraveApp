@@ -5,5 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.westley.frostgraveapp"})
-public class FrostgraveAppAppl
+//@ComponentScan(basePackages = {"com.westley.frostgraveapp.controllers"})
+public class FrostgraveAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FrostgraveAppApplication.class, args);
+	}
+
+}

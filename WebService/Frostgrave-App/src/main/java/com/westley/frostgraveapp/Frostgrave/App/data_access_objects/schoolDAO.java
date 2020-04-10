@@ -1,4 +1,4 @@
-package com.westley.frostgraveapp.data_access_objects;
+package com.westley.frostgraveapp.Frostgrave.App.data_access_objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -9,10 +9,11 @@ import java.sql.SQLException;
 import java.util.*;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.westley.frostgraveapp.models.*;
+import com.westley.frostgraveapp.Frostgrave.App.models.*;
 
 @Repository
 public class schoolDAO {
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

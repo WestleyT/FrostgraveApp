@@ -1,15 +1,15 @@
-package com.westley.frostgraveapp.controllers;
+package com.westley.frostgraveapp.Frostgrave.App.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
-import com.westley.frostgraveapp.data_access_objects.*;
-import com.westley.frostgraveapp.models.*;
+import com.westley.frostgraveapp.Frostgrave.App.data_access_objects.*;
+import com.westley.frostgraveapp.Frostgrave.App.models.*;
 
-@RestController
 @RequestMapping("schools")
+@RestController
 public class SchoolController {
 
     @Autowired
