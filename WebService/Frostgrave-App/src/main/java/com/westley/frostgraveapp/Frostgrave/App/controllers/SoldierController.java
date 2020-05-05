@@ -2,28 +2,22 @@ package com.westley.frostgraveapp.Frostgrave.App.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.*;
 import com.westley.frostgraveapp.Frostgrave.App.data_access_objects.*;
 import com.westley.frostgraveapp.Frostgrave.App.models.*;
+import java.util.*;
 
-@RequestMapping("schools")
+@RequestMapping("soldiers")
 @RestController
-public class SchoolController {
+public class SoldierController {
 
     @Autowired
-    schoolDAO schoolDAO;
+    soldierDAO soldierDAO;
 
     @GetMapping(produces = "application/json")
-    public List<School> getAllSchools() {
-        return schoolDAO.findAllSchools();
-    }
-
-    @GetMapping(value = "/{schoolID}", produces = "application/json")
-    public List<School> getSchoolById(@PathVariable Integer schoolID) {
-        return schoolDAO.getSchoolById(schoolID);
+    public List<Soldier> getAllSoldiers() {
+        return soldierDAO.getAllSoldiers();
     }
 
 }

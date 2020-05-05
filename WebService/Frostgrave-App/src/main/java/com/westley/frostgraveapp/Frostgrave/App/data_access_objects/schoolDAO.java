@@ -21,6 +21,10 @@ public class schoolDAO {
         return jdbcTemplate.query("select * from lk_schools", new SchoolRowMapper());
     }
 
+    public List<School> getSchoolById(Integer id) {
+        return jdbcTemplate.query("select * from lk_schools where ID = ?", new SchoolRowMapper(), new Object[] {id});
+    }
+
     private class SchoolRowMapper implements RowMapper<School> {
         @Override
         public School mapRow(ResultSet rs, int rowNum) throws SQLException {
