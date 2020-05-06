@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 
-import { NewWarbandViewComponent } from './new-warband-view/new-warband-view.component';
+import { NewWarbandViewComponent } from './views/new-warband-view/new-warband-view.component';
 import { HomeComponent } from './home/home.component'
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HomeComponent } from './home/home.component'
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
