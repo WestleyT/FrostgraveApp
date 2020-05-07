@@ -5,14 +5,6 @@ import { Spell } from 'src/app/models/spell';
 import { SpellService } from 'src/app/services/spell.service';
 import { Observable } from 'rxjs';
 
-interface WizardStats {
-  move: Number;
-  fight: Number;
-  shoot: Number;
-  armor: Number;
-  will: Number;
-  health: Number;
-}
 
 @Component({
   selector: 'app-new-warband-view',
@@ -21,29 +13,15 @@ interface WizardStats {
 })
 export class NewWarbandViewComponent implements OnInit, OnDestroy {
 
-  schools: School[];
-  spells: Spell[];
-  dataArray: WizardStats[] = [{move: 6, fight: 2, shoot: 0, armor: 10, will: 4, health: 14}];
-  columnsToDisplay: String[] = ['move', 'fight', 'shoot', 'armor', 'will', 'health'];
-  schoolSubscription;
-  spellSubscription;
-
-  constructor(private schoolService: SchoolService,
-              private spellService: SpellService) { }
+  Wizard: string = 'Wizard';
+  Apprentice: string = 'Apprentice';
 
   ngOnInit(): void {
-    this.schoolSubscription = this.schoolService.getSchoolList().subscribe(data => {
-      this.schools = data;
-    });
 
-    this.spellSubscription = this.spellService.getSpellsList().subscribe(data => {
-      this.spells = data;
-    })
   }
 
   ngOnDestroy(): void {
-    this.schoolSubscription.unsubscribe();
-    this.spellSubscription.unsubscribe();
+
   }
 
 }

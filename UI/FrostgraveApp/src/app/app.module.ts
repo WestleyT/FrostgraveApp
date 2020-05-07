@@ -19,13 +19,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 
 import { NewWarbandViewComponent } from './views/new-warband-view/new-warband-view.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { WizardCardComponent } from './views/wizard-card/wizard-card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NewWarbandViewComponent,
-    HomeComponent
+    HomeComponent,
+    WizardCardComponent
   ],
   imports: [
     BrowserModule,
