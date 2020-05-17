@@ -6,14 +6,14 @@
         <mat-label>Wizard's Name</mat-label>
         <input matInput placeholder='Name'>
     </mat-form-field>
-        <mat-form-field appearance='outline'>
-            <mat-label>School</mat-label>
-            <mat-select>
-                <mat-option *ngFor='let school of (schools | async)' [value]='school.id'>
-                    {{school.school}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
+    <mat-form-field appearance='outline'>
+        <mat-label>School</mat-label>
+        <mat-select (selectionChange)='schoolSelected($event.value)'>
+            <mat-option *ngFor='let school of (schools | async)' [value]='school.id'>
+                {{school.school}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
     <mat-form-field appearance='outline'>
         <mat-label>Experience</mat-label>
         <input matInput type='number' placeholder='Exp.'>

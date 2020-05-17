@@ -16,4 +16,6 @@ export class SpellService {
    public getSpellsList(): Observable<Spell[]> {
      return this.http.get<Spell[]>(this.baseUrl);
    }
+
+   //public getSpellSelection(selectedSchool): 
 }

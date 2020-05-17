@@ -25,6 +25,8 @@ export class WizardCardComponent implements OnInit, OnDestroy {
   @Input()
   title: string = '';
 
+  chosenSchool: string = '';
+
   schools: Observable<School[]>;
   spells: Observable<Spell[]>;
   dataArray: WizardStats[] = [{move: 6, fight: 2, shoot: 0, armor: 10, will: 4, health: 14}];
@@ -36,10 +38,17 @@ export class WizardCardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.schools = this.schoolService.getSchoolList();
     this.spells = this.spellService.getSpellsList();
+    // this.spellService.getSpellsList().subscribe(spellList => {
+    //   console.log(spellList);
+    // })
   }
 
   ngOnDestroy(): void {
 
+  }
+
+  schoolSelected(value) {
+    console.log(value);
   }
 
 }
